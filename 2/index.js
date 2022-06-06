@@ -8,6 +8,14 @@ const myData = {
 app.get("/", function (req, res) {
   res.send(myData);
 });
+app.post("/", (req, res) => {
+  const data = myData;
+  res.send(data);
+});
+app.put("/", (req, res) => {
+  myData.name = "Avinash";
+  myData.lastName = "Luhana";
+});
 
 app.listen(3000, (err) => {
   if (err) {
