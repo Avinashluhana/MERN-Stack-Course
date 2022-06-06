@@ -15,6 +15,17 @@ app.post("/", (req, res) => {
 app.put("/", (req, res) => {
   myData.name = "Avinash";
   myData.lastName = "Luhana";
+  res.send(myData);
+});
+
+app.patch("/", (req, res) => {
+  myData.name = "Av";
+  res.send(myData);
+});
+
+app.delete("/", (req, res) => {
+  let data = myData.name;
+  res.send(data);
 });
 
 app.listen(3000, (err) => {
