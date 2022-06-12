@@ -7,7 +7,7 @@ app.use(morgan("tiny"));
 app.use(bodyParser.json());
 
 const myData = {
-  name: "avinash",
+  name: "Avinash",
   lastName: "Kumar",
 };
 
