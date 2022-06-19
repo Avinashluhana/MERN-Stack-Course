@@ -4,13 +4,23 @@ exports.postTodo = async (req, res) => {
   const test = new Test(body);
   const data = await test.save();
 
+  if (data === " ") {
+    return res.status(404).json({
+      message: "kindly provide some data",
+    });
+  }
+  else {
+    return res.status(200).json({
+      message: " data is saved ",
+      data,
+    });
+
+  }
+
   // const kitty = new Cat({ name: 'Zildjian' });
   // kitty.save().then(() => console.log('meow'));
 
-  return res.status(200).json({
-    message: " data is saved ",
-    data,
-  });
+  
 };
 
 exports.getTodo = async (req, res) => {
