@@ -9,14 +9,17 @@ require("./config/mongodb");
 
 // User Defined Modules
 const middleware = require("./middleware/middleware");
-const route = require("./route/routes");
+// const route = require("./route/routes");
 
+const todo = require("./route/routes");
+const user = require("./route/user");
 // Express Container
 
 // Middleware
 app.use(middleware.morgan);
 app.use(middleware.bodyParser);
-app.use(route);
+app.use("/", user);
+app.use("/", todo);
 
 // Server Listening
 app.listen(3000, (err) => {
