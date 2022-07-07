@@ -21,8 +21,8 @@ const user = require("./route/user");
 // Middleware
 app.use(middleware.morgan);
 app.use(middleware.bodyParser);
-app.use("/", user);
-app.use("/", passport.authenticate("jwt", { session: false }), todo);
+app.use("/user", user);
+app.use("/todo", passport.authenticate("jwt", { session: false }), todo);
 
 // Server Listening
 app.listen(3000, (err) => {
