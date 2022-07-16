@@ -1,0 +1,320 @@
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+@import "bootstrap/mixins/breakpoints";
+
+/*============================
+		COLOR Pink
+==============================*/
+
+$primary-color: 			$pink;
+$primary-color-hover: 		darken($primary-color, 7%);
+
+::selection {
+    background: $primary-color;
+}
+
+/*-------- Preloader --------*/
+#preloader {
+  [data-loader="dual-ring"]{
+	border: 5px solid $primary-color;
+	border-color: $primary-color transparent $primary-color transparent;
+  }
+}
+
+a, a:focus {
+  color: $primary-color;
+}
+a:hover, a:active {
+    color: $primary-color-hover;
+}
+
+/*== Primary Nav ==*/
+
+.primary-menu, .login-signup {
+  ul.navbar-nav > li {
+    &:hover > a:not(.btn), &.active > a:not(.btn) {
+      color: $primary-color;
+    }
+	&.dropdown {
+      .dropdown-menu li {
+        &:hover > a:not(.btn) {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
+
+.primary-menu, .login-signup {
+	&.navbar-dropdown-primary ul.navbar-nav > li {
+    &.dropdown {
+      .dropdown-menu {
+        background-color: $primary-color;
+        .dropdown-menu {
+          background-color: $primary-color;
+        }
+      }
+      &:hover > a:after {
+        border-color: transparent transparent $primary-color transparent;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+
+#header .navbar-dropdown-primary.primary-menu:before {
+  background-color: $primary-color;
+}
+
+.primary-menu {
+  &.navbar-dropdown-primary ul.navbar-nav > li.dropdown .dropdown-menu .dropdown-menu {
+    background-color: $primary-color;
+  }
+}
+}
+
+/* Page Header */
+.page-header {
+  &.page-header-text-dark {
+    .breadcrumb > li {
+      a {
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
+
+
+/* Notifications Page */
+
+.notifications-list {
+.notifications-item {
+  &.unread{
+	border-left:3px solid $primary-color;
+	.icon-bell{
+		color:$primary-color;
+	}
+  }
+}
+}
+
+
+/* List Item */
+.list-item {
+  a:hover {
+    color:$primary-color;
+  }
+}
+
+/* Tags */
+.tags {
+  a {
+    &:hover {
+      background:$primary-color;
+    }
+  }
+}
+
+/* Side Post */
+.side-post .item-post {
+  .caption {
+    a {
+      &:hover {
+        color:$primary-color;
+      }
+    }
+  }
+}
+
+/* Post */
+.blog-post {
+  .title-blog {
+    a {
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+  .meta-blog {
+    li {
+      i {
+        color:$primary-color;
+      }
+      a {
+        &:hover {
+          color:$primary-color;
+        }
+      }
+    }
+  }
+}
+
+/* Accordion & Toggle */
+.accordion {
+  &:not(.accordion-flush) .accordion-header .accordion-button {
+    background-color: $primary-color;
+  }
+  &.accordion-flush .accordion-header .accordion-button{
+	color: $primary-color;
+  }
+}
+
+/* Tabs */
+.nav:not(.nav-pills):not(.nav-tabs) .nav-item .nav-link.active, .nav:not(.nav-pills) .nav-item .nav-link:not(.active):hover{color: $primary-color;}
+.nav-pills .nav-link:not(.active):hover{color: $primary-color;}
+.nav-tabs {
+  .nav-item .nav-link {
+    &.active {
+      &:after {
+        background-color: $primary-color;
+      }
+    }
+  }
+  &.flex-column {
+    .nav-item {
+      .nav-link.active {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+/* Easy Responsive Tab Accordion */
+
+.resp-tab-active {
+  border-bottom: 3px solid $primary-color;
+}
+
+.resp-vtabs {
+  li.resp-tab-active, li.resp-tab-active:hover {
+    color: $primary-color;
+  }
+}
+
+/* Brands Grid */
+.brands-grid {
+  > .row > div a {
+    &:hover {
+	  color:$primary-color;
+    }
+  }
+}
+
+#footer {
+  .nav {
+    .nav-item {
+      .nav-link {
+        &:focus {
+          color: $primary-color;
+        }
+      }
+    }
+    .nav-link:hover {
+      color: $primary-color;
+    }
+  }
+  .footer-copyright {
+    .nav {
+      .nav-link:hover {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+/* Back to Top */
+#back-to-top {
+  &:hover {
+    background-color: $primary-color;
+  }
+}
+
+/* Extras */
+.bg-primary {
+	background-color: $primary-color !important;
+}
+.text-primary, .btn-light, .btn-outline-light:hover, .btn-link, .btn-outline-light:not(:disabled):not(.disabled).active, .btn-outline-light:not(:disabled):not(.disabled):active, .link-primary {
+	color: $primary-color !important;
+}
+a.text-primary:focus, a.text-primary:hover, .btn-link:hover, .link-primary:hover, .link-primary:focus{
+	color: $primary-color-hover !important;
+}
+
+.text-muted{
+	color:#8e9a9d!important;
+}
+.text-light{
+	color:#dee3e4!important;
+}
+
+a.bg-primary:focus, a.bg-primary:hover, button.bg-primary:focus, button.bg-primary:hover{
+	background-color: $primary-color-hover!important;
+}
+.border-primary {
+	border-color: $primary-color !important;
+}
+
+.btn-primary{
+  background-color: $primary-color;
+  border-color: $primary-color;
+  &:hover {
+    background-color: $primary-color-hover;
+    border-color: $primary-color-hover;
+  }
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active{
+  background-color: $primary-color-hover;
+  border-color: $primary-color-hover;
+  
+}
+
+.btn-primary.focus, .btn-primary:focus{
+	background-color: $primary-color-hover;
+    border-color: $primary-color-hover;
+}
+
+.btn-outline-primary, .btn-outline-primary:not(:disabled):not(.disabled).active, .btn-outline-primary:not(:disabled):not(.disabled):active{
+  color: $primary-color;
+  border-color: $primary-color;
+  &:hover {
+    background-color: $primary-color;
+    border-color: $primary-color;
+	color: #fff;
+  }
+}
+
+.progress-bar,
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link, .dropdown-item.active, .dropdown-item:active{
+	background-color: $primary-color;
+}
+.page-item.active .page-link, .form-check-input:checked{
+	background-color: $primary-color;
+	border-color: $primary-color;
+}
+.list-group-item.active{
+	background-color: $primary-color;
+	border-color: $primary-color;
+}
+.page-link {
+  color: $primary-color;
+  &:hover {
+    color: $primary-color-hover;
+  }
+}
+
+/* Slider Range (jQuery UI) */
+.ui-slider {
+  .ui-widget-header {
+    background: $primary-color;
+  }
+}
+.ui-menu {
+  &.ui-widget-content .ui-state-active {
+    background: $primary-color;
+    border-color: $primary-color;
+  }
+}
