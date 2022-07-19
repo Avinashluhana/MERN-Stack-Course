@@ -10,3 +10,17 @@ export const generateMines = (data, height, width, mines) => {
   }
   return data;
 };
+
+export const getNeighbors = (data, x, y, height, width) => {
+  let neighbots = [];
+  const surroundings = [
+    [-1, -1],
+    [-1, 0],
+    [-1, 1],
+    [0, -1],
+    [0, 1],
+    [-1, -1],
+    [1, 0],
+    [1, 1],
+  ];
+};
