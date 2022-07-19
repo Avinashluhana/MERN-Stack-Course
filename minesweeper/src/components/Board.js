@@ -28,12 +28,19 @@ const Board = () => {
         >
           {Array2d.map((row, i) =>
             row.map((col, j) => {
-              return <div style={{
-                border: "1px solid white",
-                display: "flex",
-                placeContent: "center center",
-                alignItem: "Center"
-              }}>{col}</div>;
+              return (
+                <div
+                  style={{
+                    border: "1px solid white",
+                    display: "flex",
+                    placeContent: "center center",
+                    alignItem: "Center",
+                  }}
+                  key={`${i}-${j}`}
+                >
+                  {col}
+                </div>
+              );
             })
           )}
         </div>
