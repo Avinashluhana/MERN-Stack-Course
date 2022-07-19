@@ -5,12 +5,11 @@ function List() {
 
   function submit() {
     todoList.push(todo);
-    if(todoList===""){
+    if (todoList === "") {
       return false;
     }
     setTodoList([...todoList]);
     setTodo("");
-    
   }
   return (
     <div className="todo">

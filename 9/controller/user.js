@@ -7,7 +7,7 @@ exports.login = async (req, res) => {
 
   const loginUser = await user.findOne({ email, password });
 
-  if (loginUser) { 
+  if (loginUser) {
     jwt.sign(
       {
         exp: Math.floor(Date.now() / 1000) + 60 * 60,
